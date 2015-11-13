@@ -1,0 +1,16 @@
+extends layout
+
+block head
+  link(rel='stylesheet', href='/css/homepage.css')
+
+block content
+  .splash-container
+    .splash
+      form.pure-form(method="POST" action="/chat")
+        input(type="text" name="name" placeholder="chat name")
+        button.pure-button.pure-button-primary(type="submit") Let's go
+
+
+  .content-wrapper
+    .footer.l-box.is-center
+      p View the source of this layout to learn more. Made with love by the YUI Team.

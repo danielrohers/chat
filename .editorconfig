@@ -1,0 +1,17 @@
+root = true
+
+[**.js]
+indent_style = space
+indent_size = 4
+
+[**.jade]
+indent_style = space
+indent_size = 2
+
+[app/public/**.js]
+indent_style = space
+indent_size = 2
+
+[app/public/**.css]
+indent_style = space
+indent_size = 2

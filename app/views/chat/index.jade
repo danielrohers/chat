@@ -1,0 +1,31 @@
+extends ../layout
+
+block head
+  link(rel='stylesheet', href='/css/chat.css')
+
+block defer
+  script(src='/socket.io/socket.io.js')
+  script(src='/js/post.js')
+  script(src='/js/chat.js')
+
+block content
+
+  #layout.pure-g
+
+    .sidebar
+      .header
+        h1.brand-title #{slug}
+        //- h2.brand-tagline
+
+    .content.pure-u-1
+      div
+        .posts
+          section.post
+            .post-description
+              p
+      form.content.pure-form
+        input(type="hidden" id="slug" name="slug" value="#{slug}")
+        input(autocomplete="off" id="message" name="message" required disabled)
+        button.pure-button.pure-button-primary(type="submit" disabled)
+          i.fa.fa-paper-plane
+          |Send
